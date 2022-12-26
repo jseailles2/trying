@@ -14,7 +14,6 @@ missing   = required - installed
 if missing:
     # implement pip as a subprocess:
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', *missing])
-proc = subprocess.Popen('conda install -c conda-forge ffmpeg libsndfile', stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
 import spleeter
 import os
