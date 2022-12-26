@@ -62,7 +62,7 @@ def youtube2mp3 (url,outdir,fname,Token):
         fname=cwd+"/audio/"+fname+'/'+fname+'.mp3'
         out=cwd+'/audio/'
         fout=cwd+"/audio/"+idsave+'/vocals.mp3'
-        p=subprocess.run("spleeter separate "+ fname +" -p spleeter:5stems -c mp3 -o "+ out, capture_output=True)
+        p=subprocess.run("spleeter separate "+ idsave +" -p spleeter:5stems -c mp3 -o "+ out, capture_output=True)
         st.write(p)
         audio_file = open(fout, 'rb')
         audio_bytes = audio_file.read()
